@@ -1,17 +1,19 @@
 import React, { useState, useEffect }  from 'react'; 
 import TimeInput from './TimeInput';
 import CountdownStartPause from './CountdownStartPause';
-import './CountdownTimer.css';
+import SpeedInput from './SpeedInput';
 import CountdownDisplay from './CountdownDisplay';
 import CountdownStatus from './CountdownStatus';
 
+import './CountdownTimer.css';
+
 function CountdownTimer() { 
-  const [inputMinutes, setInputMinutes] = useState(''); 
+  const [inputMinutes, setInputMinutes] = useState('');
   const [isRunning, setIsRunning] = useState(false);
   const [totalSeconds, setTotalSeconds] = useState(0);
   const [secondsRemaining, setSecondsRemaining] = useState(0);
   const [speed, setSpeed] = useState(1);
-  
+
   useEffect(() => {
     if (isRunning) {
       const interval = setInterval(() => {
@@ -42,10 +44,11 @@ function CountdownTimer() {
   const onStartPause = () => {
     setIsRunning(!isRunning);
   };
-    
+
+  const onSpeedChange = newSpeed => setSpeed(newSpeed);
   return (
     <div className="countdown-timer">
-       <TimeInput
+      <TimeInput
         value={inputMinutes}
         onChange={onInputMinutesChange}
         onStart={onStart}
@@ -54,7 +57,7 @@ function CountdownTimer() {
         secondsRemaining={secondsRemaining}
         totalSeconds={totalSeconds}
       />
-       <div className="display-row">
+      <div className="display-row">
         <CountdownDisplay
           secondsRemaining={secondsRemaining}
           totalSeconds={totalSeconds}
@@ -65,6 +68,7 @@ function CountdownTimer() {
           onClick={onStartPause}
         />
       </div>
+      <SpeedInput speed={speed} onChange={onSpeedChange} />
     </div>
   );
 }
