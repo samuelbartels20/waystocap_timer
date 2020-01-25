@@ -1,0 +1,19 @@
+.countdown-timer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .countdown-timer > * {
+    margin-bottom: 24px;
+  }
+  
+  .display-row {
+    display: flex;
+    align-items: center;
+  }
+  
+  .display-row .countdown-display {
+    margin-right: 24px;
+  }
+  
