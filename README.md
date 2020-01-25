@@ -1,5 +1,7 @@
 # Samuel Bartels: Countdown Timer SPA
 
+A working hosted version could be found here [Demo](https://waystocap.herokuapp.com/)
+
 A frontend assignment for building a countdown timer SPA
 
 ![Initial Screen](/screenshots/screen_0.png)
