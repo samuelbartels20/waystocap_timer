@@ -9,7 +9,7 @@ function TimeInput({ value, onChange, onStart }) {
     <Form className="time-input">
       <Form.Field inline>
         <label>Countdown:</label>
-        <Input placeholder="(Min)" onChange={onChange} value={value} />
+        <Input placeholder="(Min)" onChange={onChange} value={value} type="number" />
         <Button onClick={onStart} positive>
           Start
         </Button>
