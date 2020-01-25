@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`activates button based on speed 1`] = `ShallowWrapper {}`;

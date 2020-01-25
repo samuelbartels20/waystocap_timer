@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`shows a different icon for running and not running 1`] = `ShallowWrapper {}`;
+
+exports[`shows a different icon for running and not running 2`] = `ShallowWrapper {}`;

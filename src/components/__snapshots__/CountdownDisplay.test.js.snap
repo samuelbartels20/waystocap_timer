@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders imminent end state 1`] = `ShallowWrapper {}`;
+
+exports[`renders initial state 1`] = `ShallowWrapper {}`;
+
+exports[`renders near end state 1`] = `ShallowWrapper {}`;
+
+exports[`renders normal state 1`] = `ShallowWrapper {}`;
