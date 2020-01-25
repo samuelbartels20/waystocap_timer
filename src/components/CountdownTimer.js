@@ -1,6 +1,7 @@
 import React, { useState }  from 'react'; 
 import TimeInput from './TimeInput';
 import './CountdownTimer.css';
+import CountdownDisplay from './CountdownDisplay';
 
 function CountdownTimer() { 
   const [inputMinutes, setInputMinutes] = useState(''); 
@@ -31,6 +32,12 @@ function CountdownTimer() {
         onChange={onInputMinutesChange}
         onStart={onStart}
       />
+       <div className="display-row">
+        <CountdownDisplay
+          secondsRemaining={secondsRemaining}
+          totalSeconds={totalSeconds}
+        />
+      </div>
     </div>
   );
 }
