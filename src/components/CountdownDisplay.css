@@ -1,0 +1,23 @@
+.countdown-display {
+  font-size: 100px;
+  font-weight: bold;
+  line-height: 100px;
+}
+
+.countdown-display.near-end {
+  color: red;
+}
+
+.countdown-display.imminent-end {
+  animation: blinking 0.3s infinite;
+}
+
+@keyframes blinking {
+  0%,
+  49% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
