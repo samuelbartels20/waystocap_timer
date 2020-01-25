@@ -5,14 +5,12 @@ import PropTypes from 'prop-types';
 import './TimeInput.css';
 
 function TimeInput({ value, onChange, onStart }) {
-  // TODO: Add validation error messages
-
   return (
     <Form className="time-input">
       <Form.Field inline>
         <label>Countdown:</label>
         <Input placeholder="(Min)" onChange={onChange} value={value} />
-        <Button onClick={onStart} success>
+        <Button onClick={onStart} positive>
           Start
         </Button>
       </Form.Field>
