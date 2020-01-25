@@ -1,5 +1,6 @@
 import React, { useState }  from 'react'; 
 import TimeInput from './TimeInput';
+import CountdownStartPause from './CountdownStartPause';
 import './CountdownTimer.css';
 import CountdownDisplay from './CountdownDisplay';
 
@@ -24,6 +25,10 @@ function CountdownTimer() {
     setSecondsRemaining(totalSeconds);
     setTotalSeconds(totalSeconds);
   };
+
+  const onStartPause = () => {
+    setIsRunning(!isRunning);
+  };
     
   return (
     <div className="countdown-timer">
@@ -32,10 +37,16 @@ function CountdownTimer() {
         onChange={onInputMinutesChange}
         onStart={onStart}
       />
+      
        <div className="display-row">
         <CountdownDisplay
           secondsRemaining={secondsRemaining}
           totalSeconds={totalSeconds}
+        />
+        <CountdownStartPause
+          disabled={secondsRemaining === 0 || totalSeconds === 0}
+          isRunning={isRunning}
+          onClick={onStartPause}
         />
       </div>
     </div>
