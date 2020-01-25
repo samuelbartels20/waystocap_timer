@@ -46,8 +46,8 @@ function CountdownTimer() {
   };
 
   const onSpeedChange = newSpeed => setSpeed(newSpeed);
-  return (
-    <div className="countdown-timer">
+  return ( 
+      <div className="countdown-timer">
       <TimeInput
         value={inputMinutes}
         onChange={onInputMinutesChange}
@@ -69,7 +69,7 @@ function CountdownTimer() {
         />
       </div>
       <SpeedInput speed={speed} onChange={onSpeedChange} />
-    </div>
+    </div> 
   );
 }
 
